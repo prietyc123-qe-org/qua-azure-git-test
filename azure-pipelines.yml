@@ -8,7 +8,7 @@ trigger:
 # Can be deleted if self-hosted agents are not being used
 # See https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/agents
 pool:
-  name: Default
+  name: resourcehub
 
 container:
   image: quay.io/redhat-appstudio/rhtap-task-runner:latest
@@ -19,7 +19,7 @@ container:
 # Can be deleted if the variables are set differently
 # See https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables
 variables:
-- group: rhtap
+- group: pkumari-variables
 
 steps:
   - bash: |
@@ -31,7 +31,7 @@ steps:
       GITOPS_AUTH_PASSWORD: $(GITOPS_AUTH_PASSWORD)
       # Set this password for your specific registry
       IMAGE_REGISTRY_PASSWORD: $(IMAGE_REGISTRY_PASSWORD)
-      # QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
+      QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
       # ARTIFACTORY_IO_CREDS_PSW: $(ARTIFACTORY_IO_CREDS_PSW)
       # NEXUS_IO_CREDS_PSW: $(NEXUS_IO_CREDS_PSW)
       COSIGN_SECRET_PASSWORD: $(COSIGN_SECRET_PASSWORD)
@@ -47,7 +47,7 @@ steps:
       GITOPS_AUTH_PASSWORD: $(GITOPS_AUTH_PASSWORD)
       # Set this password for your specific registry
       IMAGE_REGISTRY_PASSWORD: $(IMAGE_REGISTRY_PASSWORD)
-      # QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
+      QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
       # ARTIFACTORY_IO_CREDS_PSW: $(ARTIFACTORY_IO_CREDS_PSW)
       # NEXUS_IO_CREDS_PSW: $(NEXUS_IO_CREDS_PSW)
       COSIGN_SECRET_PASSWORD: $(COSIGN_SECRET_PASSWORD)
@@ -61,7 +61,7 @@ steps:
       GITOPS_AUTH_PASSWORD: $(GITOPS_AUTH_PASSWORD)
       # Set this password for your specific registry
       IMAGE_REGISTRY_PASSWORD: $(IMAGE_REGISTRY_PASSWORD)
-      # QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
+      QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
       # ARTIFACTORY_IO_CREDS_PSW: $(ARTIFACTORY_IO_CREDS_PSW)
       # NEXUS_IO_CREDS_PSW: $(NEXUS_IO_CREDS_PSW)
       COSIGN_SECRET_PASSWORD: $(COSIGN_SECRET_PASSWORD)
@@ -79,7 +79,7 @@ steps:
       GITOPS_AUTH_PASSWORD: $(GITOPS_AUTH_PASSWORD)
       # Set this password for your specific registry
       IMAGE_REGISTRY_PASSWORD: $(IMAGE_REGISTRY_PASSWORD)
-      # QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
+      QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
       # ARTIFACTORY_IO_CREDS_PSW: $(ARTIFACTORY_IO_CREDS_PSW)
       # NEXUS_IO_CREDS_PSW: $(NEXUS_IO_CREDS_PSW)
       COSIGN_SECRET_PASSWORD: $(COSIGN_SECRET_PASSWORD)
@@ -95,7 +95,7 @@ steps:
       GITOPS_AUTH_PASSWORD: $(GITOPS_AUTH_PASSWORD)
       # Set this password for your specific registry
       IMAGE_REGISTRY_PASSWORD: $(IMAGE_REGISTRY_PASSWORD)
-      # QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
+      QUAY_IO_CREDS_PSW: $(QUAY_IO_CREDS_PSW)
       # ARTIFACTORY_IO_CREDS_PSW: $(ARTIFACTORY_IO_CREDS_PSW)
       # NEXUS_IO_CREDS_PSW: $(NEXUS_IO_CREDS_PSW)
       COSIGN_SECRET_PASSWORD: $(COSIGN_SECRET_PASSWORD)
